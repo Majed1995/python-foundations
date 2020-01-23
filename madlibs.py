@@ -1,0 +1,17 @@
+print("Mad Libs where libs get mad ")
+print("Start below: ")
+print()
+
+
+number = input("Enter a number from 1 to 12: ")
+noun = input("Enter a noun (plural): ")
+name = input("Enter a name: ")
+sentence = input("Enter a sentence: ")
+verb = input("Enter a verb: ")
+print()
+print("the story goes... ")
+print()
+print("It was %s o'clock when I heard a knock at the door." % (number))
+print('I opened the door and there was a box full of %s with a note saying "From Mr. %s."' % (noun,name.title()))
+print('Just as I closed the door I heard "%s." ' % (sentence.upper()))
+print("I froze in place and all I could do is %s. " % (verb))

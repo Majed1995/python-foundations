@@ -25,16 +25,16 @@ class Manager(Employee):
         return "Name: %s, Age: %d, Salary: %d, Working Years: %d, Bonus: %f" % (self.name,self.age,self.salary,self.get_working_years(), self.get_bonus())
 
 manager1 = Manager("Majed", 24, 2350, 2018, 12.5)
-print(manager1.get_bonus())
+# print(manager1.get_bonus())
 # print(manager1.get_working_years)
 employees = []
 managers = [manager1]
 def option():
-    """Options:
+    print ("""Options:
     1- Show Employee
     2- Show Manager
     3- Add Employee
-    4- Add Manager"""
+    4- Add Manager""")
 option()
 user_input = int(input("What would you like to do? "))
 while user_input!= 5:
@@ -46,6 +46,7 @@ while user_input!= 5:
     elif user_input == 2:
         for manager in managers:
             print (manager)
+        option()
         user_input = int(input("What would you like to do? "))
     elif user_input == 3:
         name = input("Enter name: ")
@@ -55,6 +56,7 @@ while user_input!= 5:
         employee =  Employee(name,int(age),int(salary), int(employment))
         employees.append(employee)
         print ("employee added")
+        option()
         user_input = int(input("What would you like to do? "))
     elif user_input == 4:
         name = input("Enter name: ")
@@ -62,8 +64,11 @@ while user_input!= 5:
         salary = input("Enter Salary: ")
         employment = input("Enter working years: ")
         bonus = input("Enter bonus: ")
-        user_input = input("What would you like to do? ")
         manager =  Manager(name,int(age),int(salary), int(employment), float(bonus))
         managers.append(manager)
+        print("manager added")
+        option()
+        user_input = input("What would you like to do? ")
+       
     else:
         user_input = int(input("Invalid input, What would you like to do? "))
